@@ -1,12 +1,11 @@
 import Image from "next/image";
-import FadeIn from "./FadeIn";
 
 export default function Hero() {
   return (
     <section className="bg-gradient-to-b from-white to-[#F7FBFF]">
       <div className="mx-auto flex min-h-[88vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
         <Image
-          src="/logo.svg"
+          src="/color_logo.svg"
           alt="Next Chapter Learning Logo"
           width={200}
           height={200}
