@@ -6,7 +6,7 @@ const tutors = [
     title: "Co-Founder",
     subjects: "fill this in later",
     bio: "fill this in later",
-    image: "/yl.jpg",
+    image: "/yl.JPG",
   },
   {
     name: "Jediael",
