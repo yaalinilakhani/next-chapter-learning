@@ -90,7 +90,6 @@ const services = [
 
 export default function Services() {
   const [openCard, setOpenCard] = useState<number | null>(null);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
     <section id="services" className="bg-white py-24">
@@ -111,8 +110,6 @@ export default function Services() {
             const Icon = service.icon;
 
             const isOpen = openCard === index;
-            const isHovered = hoveredCard === index;
-            const expanded = isOpen || isHovered;
 
             return (
               <div
@@ -120,34 +117,26 @@ export default function Services() {
                 onClick={() =>
                   setOpenCard(isOpen ? null : index)
                 }
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
                 className="cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#5CA3FF] hover:shadow-2xl"
               >
                 {/* Top */}
                 <div className="flex items-start justify-between">
                   <div
-                    className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl transition-all duration-300 ${
-                      expanded
-                        ? "bg-[#0D438B]"
-                        : "bg-[#EEF5FF]"
+                    className={`group mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EEF5FF] transition-all duration-300 hover:bg-[#0D438B] ${
+                        isOpen ? "bg-[#0D438B]" : ""
                     }`}
                   >
                     <Icon
-                      className={`h-7 w-7 transition-all duration-300 ${
-                        expanded
-                          ? "text-white"
-                          : "text-[#0D438B]"
+                      className={`h-7 w-7 transition-all duration-300 group-hover:text-white ${
+                        isOpen ? "text-white" : "text-[#0D438B]"
                       }`}
                       strokeWidth={2}
                     />
                   </div>
 
                   <ChevronDown
-                    className={`h-7 w-7 transition-all duration-300 ${
-                      expanded
-                        ? "rotate-180 text-[#0D438B]"
-                        : "text-[#5CA3FF]"
+                    className={`h-7 w-7 text-[#5CA3FF] transition-all duration-300 group-hover:rotate-180 group-hover:text-[#0D438B] ${
+                        isOpen ? "rotate-180 text-[#0D438B]" : ""
                     }`}
                   />
                 </div>
@@ -161,11 +150,11 @@ export default function Services() {
                 </p>
 
                 <div
-                  className={`overflow-hidden transition-all duration-500 ${
-                    expanded
-                      ? "mt-6 max-h-[600px] opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
+                    className={`overflow-hidden transition-all duration-500 ${
+                        isOpen
+                            ? "mt-6 max-h-[600px] opacity-100"
+                            : "max-h-0 opacity-0 group-hover:mt-6 group-hover:max-h-[600px] group-hover:opacity-100"
+                    }`}
                 >
                   <p className="text-slate-600">
                     {service.details}
