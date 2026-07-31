@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   BookOpen,
   FileText,
@@ -9,8 +12,7 @@ import {
 const services = [
   {
     title: "K–12 Tutoring",
-    short:
-      "Personalized tutoring across all core subjects.",
+    short: "Personalized tutoring across all core subjects.",
     details:
       "One-on-one tutoring designed around each student's learning style and academic goals. Available for elementary, middle, and high school students.",
     features: [
@@ -25,8 +27,7 @@ const services = [
   },
   {
     title: "ACT Test Prep",
-    short:
-      "Raise your ACT score with expert instruction.",
+    short: "Raise your ACT score with expert instruction.",
     details:
       "Comprehensive ACT preparation focused on both content mastery and proven testing strategies.",
     features: [
@@ -41,8 +42,7 @@ const services = [
   },
   {
     title: "SAT Math Prep",
-    short:
-      "Master every SAT Math topic with confidence.",
+    short: "Master every SAT Math topic with confidence.",
     details:
       "Personalized SAT Math tutoring covering every section of the exam using official-style questions.",
     features: [
@@ -57,8 +57,7 @@ const services = [
   },
   {
     title: "Essay Review",
-    short:
-      "Professional feedback before you submit.",
+    short: "Professional feedback before you submit.",
     details:
       "Detailed revisions to strengthen grammar, organization, clarity, and overall impact.",
     features: [
@@ -73,8 +72,7 @@ const services = [
   },
   {
     title: "College Applications",
-    short:
-      "Guidance through every step of the process.",
+    short: "Guidance through every step of the process.",
     details:
       "Support with applications, essays, extracurricular descriptions, and admissions strategy.",
     features: [
@@ -90,10 +88,11 @@ const services = [
 ];
 
 export default function Services() {
+  const [openCard, setOpenCard] = useState<number | null>(null);
+
   return (
     <section id="services" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
-
         <div className="text-center">
           <h2 className="text-4xl font-bold text-slate-900">
             Our Services
@@ -106,19 +105,30 @@ export default function Services() {
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const Icon = service.icon;
+            const isOpen = openCard === index;
 
             return (
               <div
                 key={service.title}
-                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#5CA3FF] hover:shadow-2xl"
+                onClick={() =>
+                  setOpenCard(isOpen ? null : index)
+                }
+                className="group cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#5CA3FF] hover:shadow-2xl"
               >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EEF5FF] transition group-hover:bg-[#0D438B]">
-                  <Icon
-                    className="h-7 w-7 text-[#0D438B] transition group-hover:text-white"
-                    strokeWidth={2}
-                  />
+                {/* Top */}
+                <div className="flex items-start justify-between">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EEF5FF] transition group-hover:bg-[#0D438B]">
+                    <Icon
+                      className="h-7 w-7 text-[#0D438B] transition group-hover:text-white"
+                      strokeWidth={2}
+                    />
+                  </div>
+
+                  <span className="text-3xl font-light text-[#5CA3FF] transition-transform duration-300">
+                    {isOpen ? "−" : "+"}
+                  </span>
                 </div>
 
                 <h3 className="text-2xl font-bold text-[#0D438B]">
@@ -129,40 +139,43 @@ export default function Services() {
                   {service.short}
                 </p>
 
-                {/* Hidden content */}
-                <div className="grid max-h-0 grid-rows-[0fr] overflow-hidden transition-all duration-500 group-hover:max-h-[500px] group-hover:grid-rows-[1fr]">
-                  <div className="overflow-hidden">
+                {/* Expandable Content */}
+                <div
+                  className={`overflow-hidden transition-all duration-500 ${
+                    isOpen
+                      ? "max-h-[600px] opacity-100 mt-6"
+                      : "max-h-0 opacity-0 group-hover:max-h-[600px] group-hover:opacity-100 group-hover:mt-6"
+                  }`}
+                >
+                  <p className="text-slate-600">
+                    {service.details}
+                  </p>
 
-                    <p className="mt-6 text-slate-600">
-                      {service.details}
-                    </p>
+                  <ul className="mt-5 space-y-2">
+                    {service.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 text-slate-700"
+                      >
+                        <span className="text-[#5CA3FF] font-bold">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
 
-                    <ul className="mt-5 space-y-2">
-                      {service.features.map((feature) => (
-                        <li
-                          key={feature}
-                          className="flex items-center gap-2 text-slate-700"
-                        >
-                          <span className="text-[#5CA3FF]">✓</span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                  <p className="mt-6 text-lg font-bold text-[#0D438B]">
+                    {service.price}
+                  </p>
 
-                    <p className="mt-6 text-lg font-bold text-[#0D438B]">
-                      {service.price}
-                    </p>
-
-                    <a
-                      href="https://calendly.com/support-nextchapterlearning/free-consultation"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-6 inline-block rounded-xl bg-[#0D438B] px-5 py-3 font-semibold text-white transition hover:bg-[#08356D]"
-                    >
-                      Book Consultation
-                    </a>
-
-                  </div>
+                  <a
+                    href="https://calendly.com/support-nextchapterlearning/free-consultation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="mt-6 inline-block rounded-xl bg-[#0D438B] px-5 py-3 font-semibold text-white transition hover:bg-[#08356D]"
+                  >
+                    Book Consultation
+                  </a>
                 </div>
               </div>
             );
