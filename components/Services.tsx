@@ -9,32 +9,82 @@ import {
 const services = [
   {
     title: "K–12 Tutoring",
-    description:
-      "Personalized tutoring across all core subjects to help students build confidence and improve their grades.",
+    short:
+      "Personalized tutoring across all core subjects.",
+    details:
+      "One-on-one tutoring designed around each student's learning style and academic goals. Available for elementary, middle, and high school students.",
+    features: [
+      "Math",
+      "Science",
+      "English",
+      "Homework Help",
+      "Study Skills",
+    ],
+    price: "Starting at $__/hour",
     icon: BookOpen,
   },
   {
     title: "ACT Test Prep",
-    description:
-      "Targeted instruction, proven strategies, and practice exams designed to maximize ACT scores.",
+    short:
+      "Raise your ACT score with expert instruction.",
+    details:
+      "Comprehensive ACT preparation focused on both content mastery and proven testing strategies.",
+    features: [
+      "English",
+      "Math",
+      "Reading",
+      "Science",
+      "Practice Exams",
+    ],
+    price: "Starting at $__/hour",
     icon: FileText,
   },
   {
     title: "SAT Math Prep",
-    description:
-      "Master algebra, geometry, statistics, and advanced math with personalized SAT preparation.",
+    short:
+      "Master every SAT Math topic with confidence.",
+    details:
+      "Personalized SAT Math tutoring covering every section of the exam using official-style questions.",
+    features: [
+      "Algebra",
+      "Geometry",
+      "Advanced Math",
+      "Problem Solving",
+      "Practice Tests",
+    ],
+    price: "Starting at $__/hour",
     icon: Calculator,
   },
   {
     title: "Essay Review",
-    description:
-      "Receive detailed feedback on structure, grammar, clarity, and overall impact before submission.",
+    short:
+      "Professional feedback before you submit.",
+    details:
+      "Detailed revisions to strengthen grammar, organization, clarity, and overall impact.",
+    features: [
+      "Grammar",
+      "Structure",
+      "Clarity",
+      "Feedback",
+      "Suggestions",
+    ],
+    price: "Starting at $__/essay",
     icon: PenTool,
   },
   {
     title: "College Applications",
-    description:
-      "Guidance through applications, personal statements, extracurriculars, and admissions strategy.",
+    short:
+      "Guidance through every step of the process.",
+    details:
+      "Support with applications, essays, extracurricular descriptions, and admissions strategy.",
+    features: [
+      "Common App",
+      "Essay Planning",
+      "Activity List",
+      "Application Review",
+      "College Strategy",
+    ],
+    price: "Starting at $__/hour",
     icon: GraduationCap,
   },
 ];
@@ -62,11 +112,11 @@ export default function Services() {
             return (
               <div
                 key={service.title}
-                className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-3 hover:border-[#5CA3FF] hover:shadow-2xl"
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#5CA3FF] hover:shadow-2xl"
               >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EEF5FF]">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EEF5FF] transition group-hover:bg-[#0D438B]">
                   <Icon
-                    className="h-7 w-7 text-[#0D438B]"
+                    className="h-7 w-7 text-[#0D438B] transition group-hover:text-white"
                     strokeWidth={2}
                   />
                 </div>
@@ -76,8 +126,44 @@ export default function Services() {
                 </h3>
 
                 <p className="mt-4 leading-7 text-slate-600">
-                  {service.description}
+                  {service.short}
                 </p>
+
+                {/* Hidden content */}
+                <div className="grid max-h-0 grid-rows-[0fr] overflow-hidden transition-all duration-500 group-hover:max-h-[500px] group-hover:grid-rows-[1fr]">
+                  <div className="overflow-hidden">
+
+                    <p className="mt-6 text-slate-600">
+                      {service.details}
+                    </p>
+
+                    <ul className="mt-5 space-y-2">
+                      {service.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="flex items-center gap-2 text-slate-700"
+                        >
+                          <span className="text-[#5CA3FF]">✓</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <p className="mt-6 text-lg font-bold text-[#0D438B]">
+                      {service.price}
+                    </p>
+
+                    <a
+                      href="https://calendly.com/YOUR-LINK"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 inline-block rounded-xl bg-[#0D438B] px-5 py-3 font-semibold text-white transition hover:bg-[#08356D]"
+                    >
+                      Book Consultation
+                    </a>
+
+                  </div>
+                </div>
               </div>
             );
           })}
