@@ -154,7 +154,7 @@ export default function Services() {
                     </p>
 
                     <a
-                      href="https://calendly.com/YOUR-LINK"
+                      href="https://calendly.com/support-nextchapterlearning/free-consultation"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-6 inline-block rounded-xl bg-[#0D438B] px-5 py-3 font-semibold text-white transition hover:bg-[#08356D]"
