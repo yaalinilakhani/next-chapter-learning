@@ -4,9 +4,10 @@ import { useState } from "react";
 import {
   BookOpen,
   FileText,
-  Calculator,
+ Calculator,
   PenTool,
   GraduationCap,
+  ChevronDown,
 } from "lucide-react";
 
 const services = [
@@ -89,6 +90,7 @@ const services = [
 
 export default function Services() {
   const [openCard, setOpenCard] = useState<number | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
     <section id="services" className="bg-white py-24">
@@ -107,7 +109,10 @@ export default function Services() {
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
             const Icon = service.icon;
+
             const isOpen = openCard === index;
+            const isHovered = hoveredCard === index;
+            const expanded = isOpen || isHovered;
 
             return (
               <div
@@ -115,20 +120,36 @@ export default function Services() {
                 onClick={() =>
                   setOpenCard(isOpen ? null : index)
                 }
-                className="group cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#5CA3FF] hover:shadow-2xl"
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
+                className="cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#5CA3FF] hover:shadow-2xl"
               >
                 {/* Top */}
                 <div className="flex items-start justify-between">
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EEF5FF] transition group-hover:bg-[#0D438B]">
+                  <div
+                    className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl transition-all duration-300 ${
+                      expanded
+                        ? "bg-[#0D438B]"
+                        : "bg-[#EEF5FF]"
+                    }`}
+                  >
                     <Icon
-                      className="h-7 w-7 text-[#0D438B] transition group-hover:text-white"
+                      className={`h-7 w-7 transition-all duration-300 ${
+                        expanded
+                          ? "text-white"
+                          : "text-[#0D438B]"
+                      }`}
                       strokeWidth={2}
                     />
                   </div>
 
-                  <span className="text-3xl font-light text-[#5CA3FF] transition-transform duration-300">
-                    {isOpen ? "−" : "+"}
-                  </span>
+                  <ChevronDown
+                    className={`h-7 w-7 transition-all duration-300 ${
+                      expanded
+                        ? "rotate-180 text-[#0D438B]"
+                        : "text-[#5CA3FF]"
+                    }`}
+                  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-[#0D438B]">
@@ -139,12 +160,11 @@ export default function Services() {
                   {service.short}
                 </p>
 
-                {/* Expandable Content */}
                 <div
                   className={`overflow-hidden transition-all duration-500 ${
-                    isOpen
-                      ? "max-h-[600px] opacity-100 mt-6"
-                      : "max-h-0 opacity-0 group-hover:max-h-[600px] group-hover:opacity-100 group-hover:mt-6"
+                    expanded
+                      ? "mt-6 max-h-[600px] opacity-100"
+                      : "max-h-0 opacity-0"
                   }`}
                 >
                   <p className="text-slate-600">
@@ -157,7 +177,9 @@ export default function Services() {
                         key={feature}
                         className="flex items-center gap-2 text-slate-700"
                       >
-                        <span className="text-[#5CA3FF] font-bold">✓</span>
+                        <span className="font-bold text-[#5CA3FF]">
+                          ✓
+                        </span>
                         {feature}
                       </li>
                     ))}
