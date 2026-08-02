@@ -4,14 +4,12 @@ const tutors = [
   {
     name: "Yaalini",
     title: "Co-Founder",
-    subjects: "fill this in later",
     bio: "fill this in later",
     image: "/yl.JPG",
   },
   {
     name: "Jediael",
     title: "Co-Founder",
-    subjects: "fill this in later",
     bio: "Hi, I'm Jediael Chintha — a current medical student in the University of Missouri-Kansas City's six-year BA/MD program, one of the most competitive combined-degree programs in the country. Getting here meant mastering exactly the skills I now help my students build: how to study smarter, think critically under pressure, and turn hard subjects into ones that actually make sense.",
     image: "/jediael.jpg",
   },
@@ -53,10 +51,6 @@ export default function Tutors() {
 
                 <p className="mt-2 font-semibold text-[#5CA3FF]">
                   {tutor.title}
-                </p>
-
-                <p className="mt-5 font-medium text-slate-700">
-                  {tutor.subjects}
                 </p>
 
                 <p className="mt-5 max-w-md leading-7 text-slate-600">
