@@ -1,189 +1,178 @@
-"use client";
-
-import { useState } from "react";
 import {
   BookOpen,
-  FileText,
- Calculator,
-  PenTool,
+  School,
   GraduationCap,
-  ChevronDown,
+  FileText,
+  Compass,
 } from "lucide-react";
 
 const services = [
   {
-    title: "K–12 Tutoring",
-    short: "Personalized tutoring across all core subjects.",
-    details:
-      "One-on-one tutoring designed around each student's learning style and academic goals. Available for elementary, middle, and high school students.",
-    features: [
+    title: "Elementary School Tutoring",
+    grades: "Grades K–5",
+    description:
+      "Build strong academic foundations through personalized instruction that encourages confidence, curiosity, and a love of learning.",
+    subjects: [
+      "Reading & English",
       "Math",
       "Science",
-      "English",
-      "Homework Help",
-      "Study Skills",
+      "Social Studies",
+      "Arts",
     ],
     price: "Starting at $__/hour",
     icon: BookOpen,
+    href: "/services/elementary",
   },
   {
-    title: "ACT Test Prep",
-    short: "Raise your ACT score with expert instruction.",
-    details:
-      "Comprehensive ACT preparation focused on both content mastery and proven testing strategies.",
-    features: [
+    title: "Middle School Tutoring",
+    grades: "Grades 6–8",
+    description:
+      "Strengthen core academic skills while preparing students for the increased rigor of high school coursework.",
+    subjects: [
       "English",
       "Math",
-      "Reading",
       "Science",
-      "Practice Exams",
+      "Social Studies",
     ],
     price: "Starting at $__/hour",
-    icon: FileText,
+    icon: School,
+    href: "/services/middle-school",
   },
   {
-    title: "SAT Math Prep",
-    short: "Master every SAT Math topic with confidence.",
-    details:
-      "Personalized SAT Math tutoring covering every section of the exam using official-style questions.",
-    features: [
-      "Algebra",
-      "Geometry",
-      "Advanced Math",
-      "Problem Solving",
-      "Practice Tests",
-    ],
-    price: "Starting at $__/hour",
-    icon: Calculator,
-  },
-  {
-    title: "Essay Review",
-    short: "Professional feedback before you submit.",
-    details:
-      "Detailed revisions to strengthen grammar, organization, clarity, and overall impact.",
-    features: [
-      "Grammar",
-      "Structure",
-      "Clarity",
-      "Feedback",
-      "Suggestions",
-    ],
-    price: "Starting at $__/essay",
-    icon: PenTool,
-  },
-  {
-    title: "College Applications",
-    short: "Guidance through every step of the process.",
-    details:
-      "Support with applications, essays, extracurricular descriptions, and admissions strategy.",
-    features: [
-      "Common App",
-      "Essay Planning",
-      "Activity List",
-      "Application Review",
-      "College Strategy",
+    title: "High School Tutoring",
+    grades: "Grades 9–12",
+    description:
+      "Expert tutoring across advanced coursework, AP classes, STEM subjects, writing, and college-level preparation.",
+    subjects: [
+      "English",
+      "Math",
+      "Science",
+      "Computer Science",
+      "Essay Support",
     ],
     price: "Starting at $__/hour",
     icon: GraduationCap,
+    href: "/services/high-school",
+  },
+  {
+    title: "Test Preparation",
+    grades: "ACT • SAT • AP Exams",
+    description:
+      "Targeted preparation designed around each student's strengths, weaknesses, and testing goals.",
+    subjects: [
+      "ACT",
+      "SAT Math",
+      "AP Biology",
+      "AP Chemistry",
+      "AP Calculus",
+      "AP Computer Science",
+      "AP Physics",
+    ],
+    price: "Customized Programs",
+    icon: FileText,
+    href: "/services/test-prep",
+  },
+  {
+    title: "College Counseling",
+    grades: "Applications & Planning",
+    description:
+      "Comprehensive guidance throughout the college admissions process, from school selection to final submission.",
+    subjects: [
+      "College List",
+      "Applications",
+      "Essays",
+      "Interview Prep",
+      "Application Timeline",
+    ],
+    price: "Customized Packages",
+    icon: Compass,
+    href: "/services/college-counseling",
   },
 ];
 
 export default function Services() {
-  const [openCard, setOpenCard] = useState<number | null>(null);
-
   return (
     <section id="services" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
+
         <div className="text-center">
           <h2 className="text-4xl font-bold text-slate-900">
             Our Services
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-            Personalized academic support designed around each student's goals,
-            learning style, and future success.
+          <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-600">
+            Whether your student is building foundational skills, preparing for
+            college admissions, or striving for a higher ACT or AP score, we
+            provide personalized instruction designed around their individual
+            goals.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => {
+        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {services.map((service) => {
             const Icon = service.icon;
-
-            const isOpen = openCard === index;
 
             return (
               <div
                 key={service.title}
-                onClick={() =>
-                  setOpenCard(isOpen ? null : index)
-                }
-                className="cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#5CA3FF] hover:shadow-2xl"
+                className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#5CA3FF] hover:shadow-2xl"
               >
-                {/* Top */}
-                <div className="flex items-start justify-between">
-                  <div
-                    className={`group mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EEF5FF] transition-all duration-300 hover:bg-[#0D438B] ${
-                        isOpen ? "bg-[#0D438B]" : ""
-                    }`}
-                  >
-                    <Icon
-                      className={`h-7 w-7 transition-all duration-300 group-hover:text-white ${
-                        isOpen ? "text-white" : "text-[#0D438B]"
-                      }`}
-                      strokeWidth={2}
-                    />
-                  </div>
-
-                  <ChevronDown
-                    className={`h-7 w-7 text-[#5CA3FF] transition-all duration-300 group-hover:rotate-180 group-hover:text-[#0D438B] ${
-                        isOpen ? "rotate-180 text-[#0D438B]" : ""
-                    }`}
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EEF5FF]">
+                  <Icon
+                    className="h-7 w-7 text-[#0D438B]"
+                    strokeWidth={2}
                   />
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#0D438B]">
+                <span className="text-sm font-semibold uppercase tracking-wide text-[#5CA3FF]">
+                  {service.grades}
+                </span>
+
+                <h3 className="mt-2 text-2xl font-bold text-[#0D438B]">
                   {service.title}
                 </h3>
 
                 <p className="mt-4 leading-7 text-slate-600">
-                  {service.short}
+                  {service.description}
                 </p>
 
-                <div
-                    className={`overflow-hidden transition-all duration-500 ${
-                        isOpen
-                            ? "mt-6 max-h-[600px] opacity-100"
-                            : "max-h-0 opacity-0 group-hover:mt-6 group-hover:max-h-[600px] group-hover:opacity-100"
-                    }`}
-                >
-                  <p className="text-slate-600">
-                    {service.details}
-                  </p>
+                <div className="mt-6">
+                  <h4 className="font-semibold text-slate-900">
+                    Subjects Include
+                  </h4>
 
-                  <ul className="mt-5 space-y-2">
-                    {service.features.map((feature) => (
+                  <ul className="mt-3 space-y-2">
+                    {service.subjects.map((subject) => (
                       <li
-                        key={feature}
+                        key={subject}
                         className="flex items-center gap-2 text-slate-700"
                       >
-                        <span className="font-bold text-[#5CA3FF]">
-                          ✓
-                        </span>
-                        {feature}
+                        <span className="text-[#5CA3FF]">✓</span>
+                        {subject}
                       </li>
                     ))}
                   </ul>
+                </div>
 
-                  <p className="mt-6 text-lg font-bold text-[#0D438B]">
+                <div className="mt-6">
+                  <p className="text-lg font-bold text-[#0D438B]">
                     {service.price}
                   </p>
+                </div>
+
+                <div className="mt-auto flex flex-col gap-3 pt-8">
+                  <a
+                    href={service.href}
+                    className="rounded-xl border-2 border-[#0D438B] px-5 py-3 text-center font-semibold text-[#0D438B] transition hover:bg-[#EEF5FF]"
+                  >
+                    Learn More
+                  </a>
 
                   <a
                     href="https://calendly.com/support-nextchapterlearning/free-consultation"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="mt-6 inline-block rounded-xl bg-[#0D438B] px-5 py-3 font-semibold text-white transition hover:bg-[#08356D]"
+                    className="rounded-xl bg-[#0D438B] px-5 py-3 text-center font-semibold text-white transition hover:bg-[#08356D]"
                   >
                     Book Consultation
                   </a>
