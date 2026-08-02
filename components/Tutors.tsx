@@ -4,14 +4,14 @@ const tutors = [
   {
     name: "Yaalini",
     title: "Co-Founder",
-    bio: "fill this in later",
+    bio: "Hi, I'm Yaalini Lakhani — a Computer Science student on the Machine Learning track at the University of Maryland, College Park. Machine learning, at its core, is about teaching a system to recognize patterns and make sense of complexity. It turns out that's not so different from what I've been doing since high school: helping students find the pattern in a subject that once felt like noise, until suddenly it clicks.",
     image: "/yl.JPG",
   },
   {
     name: "Jediael",
     title: "Co-Founder",
     bio: "Hi, I'm Jediael Chintha — a current medical student in the University of Missouri-Kansas City's six-year BA/MD program, one of the most competitive combined-degree programs in the country. Getting here meant mastering exactly the skills I now help my students build: how to study smarter, think critically under pressure, and turn hard subjects into ones that actually make sense.",
-    image: "/jediael.jpg",
+    image: "/jc.jpg",
   },
 ];
 

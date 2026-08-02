@@ -1,28 +1,38 @@
 const faqs = [
   {
-    question: "What grade levels do you tutor?",
+    question: "How much does this cost, and are there any hidden fees?",
     answer:
-      "We provide online tutoring for students in Kindergarten through 12th grade.",
+      "We offer straightforward, transparent pricing based on session type and frequency — no hidden fees or surprise charges. We'll walk you through exact rates and payment options during your initial consultation, so you know precisely what you're paying for before committing to anything.",
   },
   {
-    question: "What subjects do you offer?",
+    question: "Can you actually guarantee my student will improve?",
     answer:
-      "We offer K–12 tutoring, ACT Prep, SAT Math Prep, Essay Review, and College Application support.",
+      "We can't ethically guarantee a specific grade or score, since results depend on factors outside any tutor's control — a student's effort between sessions, their starting point, and outside circumstances all play a role. What we can promise is a genuinely personalized process: real diagnostic work up front, tailored instruction, and consistent progress tracking, so improvement is the expected outcome even though we can't put an exact number on it in advance.",
   },
   {
-    question: "Are sessions online?",
+    question: "How is this different from other tutoring services we've tried?",
     answer:
-      "Yes! All tutoring sessions are conducted virtually, making scheduling easy and flexible.",
+      "The biggest difference is personalization. We don't run students through generic worksheets or a fixed script — we diagnose exactly where a student's understanding breaks down and build tutoring around that specific gap, adjusting our teaching style to how that individual student actually learns best.",
   },
   {
-    question: "How long is each tutoring session?",
+    question: "Will my student have the same tutor every session?",
     answer:
-      "Most sessions are 60 minutes, but we can adjust the length based on each student's needs.",
+      "Yes, whenever possible. Consistency matters — a tutor who already knows your student's strengths, gaps, and learning style can move faster and more effectively than starting fresh each time.",
   },
   {
-    question: "How do I get started?",
+    question: "Is there a long-term contract, and what's your cancellation policy?",
     answer:
-      "Simply book a free consultation, and we'll discuss your goals, answer your questions, and create a personalized learning plan.",
+      "No long-term contract required. We understand needs change, and we're happy to talk through pausing or adjusting your plan as circumstances shift. For individual sessions, we just ask for reasonable advance notice to cancel or reschedule so we can offer that time to another family.",
+  },
+  {
+    question: "How will we actually know if tutoring is working?",
+    answer:
+      "We track real, concrete progress — practice scores, specific error patterns improving, grades on actual assignments, or a growing essay/writing portfolio — and check in with parents regularly, so you're never left wondering how things are going.",
+  },
+  {
+    question: "How do we get started?",
+    answer:
+      "Reach out to schedule an initial consultation. We'll talk through your student's needs, answer any remaining questions, and get them matched with the right tutor to start making progress right away.",
   },
 ];
 

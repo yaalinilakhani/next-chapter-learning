@@ -84,7 +84,6 @@ const services = [
       "Interview Prep",
       "Application Timeline",
     ],
-    price: "Customized Packages",
     icon: Compass,
     href: "/services/college-counseling",
   },
@@ -154,11 +153,6 @@ export default function Services() {
                   </ul>
                 </div>
 
-                <div className="mt-6">
-                  <p className="text-lg font-bold text-[#0D438B]">
-                    {service.price}
-                  </p>
-                </div>
 
                 <div className="mt-auto flex flex-col gap-3 pt-8">
                   <a
