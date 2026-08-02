@@ -24,18 +24,6 @@ const subjects = [
       "Essays are scored using rubrics modeled after classroom and AP standards, with progress tracked in thesis development, evidence integration, analytical depth, organization, and mechanics.",
   },
   {
-    title: "College & Application Essays",
-    icon: PenTool,
-    topics:
-      "Personal statements, supplemental essays, 'Why This School' essays, activity descriptions, and brainstorming authentic personal stories.",
-    approach:
-      "Students can choose between asynchronous editing with detailed written feedback or live collaborative editing sessions. We focus first on discovering a genuine, memorable story before refining structure, voice, and language.",
-    tailor:
-      "Some students need help generating ideas while others need organization or sentence-level refinement. Instruction is customized to the student's current stage of the writing process.",
-    assess:
-      "Progress is measured through draft-to-draft improvement with detailed feedback on voice, structure, specificity, and clarity, resulting in a polished application portfolio.",
-  },
-  {
     title: "Biology (Regular & AP)",
     icon: Dna,
     topics:
@@ -122,7 +110,7 @@ export default function HighSchoolPage() {
             High school coursework demands deeper critical thinking, stronger
             study habits, and greater independence. Our tutoring equips
             students with the knowledge, confidence, and problem-solving skills
-            needed to excel in challenging classes, prepare for college, and
+            needed to excel in challenging classes, and
             achieve their long-term academic goals.
           </p>
 
@@ -232,14 +220,14 @@ export default function HighSchoolPage() {
             <p className="mt-6 text-lg leading-8 text-slate-600">
               Every tutoring plan is customized to the student's coursework,
               academic goals, and long-term aspirations. Whether preparing for
-              challenging classes, AP courses, college admissions, or advanced
+              challenging classes, AP courses, or advanced
               STEM coursework, we'll build a plan that provides the support
               needed for success.
             </p>
 
             <div className="mt-8 rounded-2xl bg-[#EEF5FF] p-8">
               <p className="text-3xl font-bold text-[#0D438B]">
-                Starting at $__ / hour
+                Starting at $30 / hour
               </p>
 
               <p className="mt-3 text-slate-600">
@@ -261,8 +249,7 @@ export default function HighSchoolPage() {
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-blue-100">
               Whether you're preparing for AP exams, strengthening your
-              coursework, writing college essays, or getting ready for college,
-              our personalized tutoring provides the guidance and confidence
+              coursework, or just general help our personalized tutoring provides the guidance and confidence
               needed to succeed.
             </p>
 
