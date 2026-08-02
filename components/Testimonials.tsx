@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Denise R., Parent of high school student",
+    name: "Aditya K., Parent of high school student",
     quote:
       "We've worked with tutors before, but what stood out about Next Chapter Learning was how personalized it actually felt. It never seemed like a generic, one-size-fits-all program — our son's tutor took real time to figure out how he learns best and adjusted their approach around that instead of expecting him to adjust to them. We've noticed him being more independent with his schoolwork too, not just more prepared for tests.",
   },
