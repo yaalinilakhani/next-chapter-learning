@@ -157,11 +157,6 @@ export default function CollegeCounselingPage() {
               <p className="text-3xl font-bold text-[#0D438B]">
                 Starting at $50 / hour
               </p>
-
-              <p className="mt-3 text-slate-600">
-                Ask about comprehensive admissions packages during your free
-                consultation.
-              </p>
             </div>
           </div>
         </div>

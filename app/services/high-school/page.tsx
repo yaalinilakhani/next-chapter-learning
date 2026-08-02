@@ -229,11 +229,6 @@ export default function HighSchoolPage() {
               <p className="text-3xl font-bold text-[#0D438B]">
                 Starting at $30 / hour
               </p>
-
-              <p className="mt-3 text-slate-600">
-                Ask about package pricing and long-term tutoring plans during
-                your free consultation.
-              </p>
             </div>
           </div>
         </div>

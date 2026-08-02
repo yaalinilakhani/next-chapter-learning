@@ -190,11 +190,6 @@ export default function TestPrepPage() {
               <p className="text-3xl font-bold text-[#0D438B]">
                 Starting at $40 / hour
               </p>
-
-              <p className="mt-3 text-slate-600">
-                Ask about intensive exam-preparation packages during your free
-                consultation.
-              </p>
             </div>
           </div>
         </div>

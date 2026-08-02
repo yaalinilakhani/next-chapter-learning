@@ -201,11 +201,6 @@ export default function MiddleSchoolPage() {
               <p className="text-3xl font-bold text-[#0D438B]">
                 Starting at $25 / hour
               </p>
-
-              <p className="mt-3 text-slate-600">
-                Ask about sibling discounts and multi-session packages during
-                your free consultation.
-              </p>
             </div>
           </div>
         </div>
