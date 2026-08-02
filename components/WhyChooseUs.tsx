@@ -1,33 +1,33 @@
 import {
-  Users,
-  CalendarClock,
-  Target,
+  ClipboardCheck,
+  FileSearch,
+  SearchCheck,
   TrendingUp,
 } from "lucide-react";
 
 const features = [
   {
-    title: "Personalized Learning",
+    title: "Diagnostic Assessment",
     description:
-      "Every lesson is tailored to the student's goals, strengths, and learning style.",
-    icon: Users,
+      "Before the first real lesson, we assess where a student's understanding actually is — not just their grade, but which specific concepts are solid and which are shaky. This becomes the roadmap for the sessions that follow.",
+    icon: ClipboardCheck,
   },
   {
-    title: "Flexible Scheduling",
+    title: "Understanding over Speed",
     description:
-      "Online sessions that fit around school, extracurriculars, and busy family schedules.",
-    icon: CalendarClock,
+      "Timed drills and shortcuts come after a student can explain why something works, not before. We use active recall and spaced review, not passive re-reading. Students are regularly asked to solve problems and explain concepts without looking at notes, and previously covered material is revisited on a schedule so it sticks long-term instead of fading after the test.",
+    icon: FileSearch,
   },
   {
-    title: "Focused Goal Setting",
+    title: "Tailored Approach",
     description:
-      "Whether it's improving grades, preparing for exams, or building confidence, every session has a clear purpose.",
-    icon: Target,
+      "We tailor materials to the student's actual class, using their textbook, syllabus, and teacher's own problem sets whenever possible, supplemented with our own practice sets when more repetition is needed.",
+    icon: SearchCheck,
   },
   {
     title: "Track Your Progress",
     description:
-      "We monitor growth over time so students and families can see measurable improvement.",
+      "We track progress with real data — practice quiz scores, error patterns, and concept checklists — so parents get concrete updates, not vague \"doing well!\" summaries.",
     icon: TrendingUp,
   },
 ];
