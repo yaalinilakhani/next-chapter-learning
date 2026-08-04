@@ -4,6 +4,7 @@ import {
   GraduationCap,
   FileText,
   Compass,
+  Stethoscope,
 } from "lucide-react";
 
 const services = [
@@ -82,6 +83,21 @@ const services = [
     ],
     icon: Compass,
     href: "/services/college-counseling",
+  },
+  {
+    title: "BA/MD, BS/MD Program & MMI Interview Prep",
+    grades: "Pre-Med Applicants",
+    description:
+        "Comprehensive guidance for combined medical program applications, essays, and MMI interview preparation from mentors who have successfully navigated the process.",
+    subjects: [
+        "Application Strategy",
+        "Personal Statements",
+        "Secondary Essays",
+        "Mock Interviews",
+        "MMI Preparation",
+      ],
+    icon: Stethoscope,
+    href: "/services/bamd",
   },
 ];
 

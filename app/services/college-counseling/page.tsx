@@ -78,7 +78,7 @@ export default function CollegeCounselingPage() {
 
                 <p className="leading-8 text-slate-600">
                   School list building, application timeline planning,
-                  extracurricular and résumé strategy, interview preparation,
+                  extracurricular and resume strategy, interview preparation,
                   and coordination with college essay writing whenever needed.
                 </p>
               </div>
