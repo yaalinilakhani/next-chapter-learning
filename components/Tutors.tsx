@@ -4,13 +4,13 @@ const tutors = [
   {
     name: "Yaalini",
     title: "Co-Founder",
-    bio: "Hi, I'm Yaalini Lakhani — a Computer Science student on the Machine Learning track at the University of Maryland, College Park. Machine learning, at its core, is about teaching a system to recognize patterns and make sense of complexity. It turns out that's not so different from what I've been doing since high school: helping students find the pattern in a subject that once felt like noise, until suddenly it clicks.",
+    bio: "Hi, I'm Yaalini Lakhani — a Computer Science student on the Machine Learning track at the University of Maryland, College Park. I graduated high school early at 16 after skipping freshman year to attend the Illinois Mathematics and Science Academy (IMSA), Illinois' top-ranked public high school for STEM. My experience at IMSA taught me how to approach challenging material, think independently, and learn at a fast pace. Machine learning, at its core, is about teaching a system to recognize patterns and make sense of complexity. It turns out that's not so different from what I've been doing since high school: helping students find the pattern in a subject that once felt like noise, until suddenly it clicks.",
     image: "/yl.JPG",
   },
   {
     name: "Jediael",
     title: "Co-Founder",
-    bio: "Hi, I'm Jediael Chintha — a current medical student in the University of Missouri-Kansas City's six-year BA/MD program, one of the most competitive combined-degree programs in the country. Getting here meant mastering exactly the skills I now help my students build: how to study smarter, think critically under pressure, and turn hard subjects into ones that actually make sense.",
+    bio: "Hi, I'm Jediael Chintha — a current medical student in the University of Missouri-Kansas City's six-year BA/MD program. I graduated high school early at 17 after skipping freshman year to attend the Illinois Mathematics and Science Academy (IMSA), Illinois' top-ranked public high school for STEM. My experience there taught me how to study smarter, think critically, and stay confident when the material gets challenging. Getting to medical school meant developing exactly the skills I now help my students build: breaking down difficult subjects, learning efficiently, and turning concepts that once felt overwhelming into ones that actually make sense.",
     image: "/jc.jpg",
   },
 ];

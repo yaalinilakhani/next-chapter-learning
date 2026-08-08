@@ -155,7 +155,7 @@ export default function CollegeCounselingPage() {
 
             <div className="mt-8 rounded-2xl bg-[#EEF5FF] p-8">
               <p className="text-3xl font-bold text-[#0D438B]">
-                Starting at $50 / hour
+                Starting at $45 / hour
               </p>
             </div>
           </div>

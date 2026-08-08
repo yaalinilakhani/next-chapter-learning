@@ -8,37 +8,37 @@ const testimonials = [
     id: 1,
     name: "Priya M., Parent of middle school student",
     quote:
-      "My daughter used to dread homework time — now she actually asks to review with her tutor before I even bring it up. What really stood out to us was how much her confidence changed, not just her grades. She used to shut down the second something felt hard, and now she's willing to push through and ask questions instead of giving up. As a parent, that shift matters just as much to me as the report card.",
+      "My daughter used to dread doing homework, and now she actually asks to review with her tutor. Her grades have improved, but honestly, the biggest change has been her confidence. She’s much more willing to ask questions and keep trying when something is difficult.",
   },
   {
     id: 2,
     name: "Marcus T., High school student",
     quote:
-      "Before I started with Next Chapter Learning, I was barely scraping by and honestly just going through the motions in most of my classes. Working with my tutor changed the way I actually study — not just cramming before a test, but understanding the material well enough that I don't panic when I see a hard question. It's a completely different feeling walking into an exam now, and that confidence has carried over into how I approach school in general.",
+      "Before Next Chapter Learning, I was mostly just trying to get through my classes. My tutor helped me figure out how to actually study instead of cramming the night before a test. I feel way more prepared now, and I don’t get nearly as nervous when I see a hard question.",
   },
   {
     id: 3,
     name: "Aditya K., Parent of high school student",
     quote:
-      "We've worked with tutors before, but what stood out about Next Chapter Learning was how personalized it actually felt. It never seemed like a generic, one-size-fits-all program — our son's tutor took real time to figure out how he learns best and adjusted their approach around that instead of expecting him to adjust to them. We've noticed him being more independent with his schoolwork too, not just more prepared for tests.",
+      "We’ve tried tutoring before, but this felt really different. Our son’s tutor took the time to figure out how he learns instead of just following the same approach every time. We’ve also noticed that he’s become a lot more independent with his schoolwork.",
   },
   {
     id: 4,
     name: "Alicia C., College student",
     quote:
-      "Starting college, I felt completely overwhelmed trying to juggle harder classes and figure out how to actually study at this level. Next Chapter Learning helped me get organized, build a real routine, and stop feeling like I was constantly behind. More than anything, they helped me believe I could actually hit the goals I'd set for myself instead of just hoping things would work out. I'm in a completely different place academically than I was a year ago, and I don't think I'd have gotten here on my own.",
+      "When I started college, I felt completely overwhelmed and had no idea how to keep up with everything. Next Chapter Learning helped me get organized and build a routine that actually works for me. I feel so much more confident in myself academically now.",
   },
   {
     id: 5,
-    name: "Grace O., Parent of an elementary school student",
+    name: "Grace O., Parent of elementary school student",
     quote:
-      "My son has always needed a little extra support, and we were nervous about finding the right fit. What we found with Next Chapter Learning was a team that took the time to really understand him — not just as a student, but as a person — instead of rushing through material. For the first time, I felt like he was being truly seen and supported, not just tutored. That made all the difference in how he responds to learning now.",
+      "My son has always needed a little extra help, so finding the right tutor was really important to us. What I loved about Next Chapter Learning was how much they took the time to understand him. He feels comfortable asking questions now, and we’ve seen such a positive change in how he approaches school.",
   },
   {
     id: 6,
     name: "Jordan R., High school student",
     quote:
-      "I was struggling in almost every single subject and honestly felt like giving up more than once. What made the biggest difference wasn't just the academic help — it was that my tutor never made me feel behind or judged for not understanding something right away. They met me exactly where I was and helped me build back up from there, one step at a time. If your student is struggling with school in any way, I'd recommend Next Chapter Learning to anyone. Having that encouraging, patient hand made all the difference for me, and I genuinely don't think I'd be where I am now without it.",
+      "I was struggling in a lot of my classes and honestly felt like giving up sometimes. My tutor was really patient and never made me feel bad for not understanding something. They met me where I was and helped me work my way up. Having someone that encouraging made a huge difference for me.",
   },
 ];
 

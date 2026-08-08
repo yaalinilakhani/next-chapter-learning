@@ -36,7 +36,7 @@ const exams = [
     title: "AP Exam Preparation",
     icon: Award,
     topics:
-      "AP Chemistry, AP Biology, AP Computer Science A, AP Computer Science Principles, AP Calculus BC, AP Physics, and additional AP subjects as needed.",
+      "AP Chemistry, AP Biology, AP Computer Science A, AP Computer Science Principles, AP Calculus BC and AB, and additional AP subjects as needed.",
     approach:
       "Every AP subject follows the same proven framework: comprehensive content review aligned with the official College Board curriculum, extensive multiple-choice practice, and significant free-response practice scored using official AP rubrics. Since free-response questions account for many lost points, we devote substantial time to developing those skills.",
     tailor:

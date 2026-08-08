@@ -118,6 +118,12 @@ export default function BAMDPage() {
             </p>
           </div>
 
+          <div className="mt-8 rounded-2xl bg-[#EEF5FF] p-8">
+              <p className="text-3xl font-bold text-[#0D438B]">
+                Starting at $30 / hour
+              </p>
+            </div>
+
           <div className="rounded-3xl bg-[#EEF5FF] p-10">
             <h2 className="text-3xl font-bold text-[#0D438B]">
               Helping Future Physicians Reach Their Goals
@@ -132,6 +138,7 @@ export default function BAMDPage() {
               interview next month, we're committed to helping you present your
               strongest, most authentic self every step of the way.
             </p>
+            
 
             <Link
               href="https://calendly.com/support-nextchapterlearning/free-consultation"
