@@ -64,7 +64,6 @@ const services = [
       "AP Chemistry",
       "AP Calculus",
       "AP Computer Science",
-      "AP Physics",
     ],
     icon: FileText,
     href: "/services/test-prep",
