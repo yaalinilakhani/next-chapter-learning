@@ -120,7 +120,7 @@ export default function BAMDPage() {
 
           <div className="mt-8 rounded-2xl bg-[#EEF5FF] p-8">
               <p className="text-3xl font-bold text-[#0D438B]">
-                Starting at $30 / hour
+                Starting at $60 / hour
               </p>
             </div>
 
