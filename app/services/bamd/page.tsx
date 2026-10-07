@@ -141,7 +141,7 @@ export default function BAMDPage() {
             
 
             <Link
-              href="https://calendly.com/support-nextchapterlearning/free-consultation"
+              href="https://calendly.com/nextchapterlearning/free-consultation"
               target="_blank"
               className="mt-8 inline-block rounded-xl bg-[#0D438B] px-8 py-4 text-lg font-semibold text-white transition hover:bg-[#08356D]"
             >

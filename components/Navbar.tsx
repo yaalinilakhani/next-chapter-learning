@@ -146,7 +146,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://calendly.com/support-nextchapterlearning/free-consultation"
+            href="https://calendly.com/nextchapterlearning/free-consultation"
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}
