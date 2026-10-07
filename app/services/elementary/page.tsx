@@ -235,7 +235,7 @@ export default function ElementaryPage() {
             </p>
 
             <a
-              href="https://calendly.com/support-nextchapterlearning/free-consultation"
+              href="https://calendly.com/nextchapterlearning/free-consultation"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 inline-block rounded-xl bg-white px-8 py-4 font-semibold text-[#0D438B] transition hover:bg-slate-100"
